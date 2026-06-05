@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CVConnect | İş Arayan Kayıt</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-content">
+        <a class="brand" href="../index.html">
+          <img class="brand-logo" src="../assets/img/logo-placeholder.webp" alt="CVConnect Logo" />
+          <span>CVConnect</span>
+        </a>
+        <nav class="nav">
+          <a data-nav href="../index.html">Ana Sayfa</a>
+          <a data-nav href="candidate-register.html">İş Arayan Kayıt</a>
+          <a data-nav href="employer-register.html">İşveren Kayıt</a>
+          <a data-nav href="candidate-search.html">Çalışan Ara</a>
+          <a data-nav href="jobs.html">İlanlar</a>
+          <a data-nav href="inbox.html">Mesajlar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-head">
+        <h1 class="page-title">İş Arayan Kayıt Formu</h1>
+        <p class="lead">Adaylar profil bilgilerini ve fotoğraflarını ekleyerek görünür olabilir.</p>
+      </section>
+
+      <section class="card">
+        <form id="candidate-form">
+          <div class="form-grid">
+            <label>Ad Soyad<input name="fullName" required /></label>
+            <label>Hedef Pozisyon<input name="title" required /></label>
+            <label>E-posta<input type="email" name="email" required /></label>
+            <label>Telefon<input name="phone" required /></label>
+            <label>Şehir<input name="city" required /></label>
+            <label>Deneyim (yıl)<input type="number" min="0" name="experience" required /></label>
+            <label>Şifre<input type="password" name="password" required /></label>
+          </div>
+          <label>Yetenekler (virgülle ayırın)<input name="skills" placeholder="React, Node.js, Figma" /></label>
+          <label>Kısa Biyografi<textarea name="bio" required></textarea></label>
+          <label>Profil Fotoğrafı<input id="photo" type="file" accept="image/*" /></label>
+          <button class="btn btn-primary" type="submit">Profili Kaydet</button>
+          <div id="candidate-feedback" class="success hidden"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">CVConnect</div>
+    </footer>
+
+    <script src="../assets/js/storage.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/candidate-register.js"></script>
+  </body>
+  </html>

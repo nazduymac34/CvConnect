@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CVConnect | Yönetim Paneli</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <style>
+      .admin-stats { margin-bottom: 30px; }
+      .admin-table-container { overflow-x: auto; margin-top: 20px; }
+      .admin-table { width: 100%; border-collapse: collapse; text-align: left; }
+      .admin-table th, .admin-table td { padding: 12px 16px; border-bottom: 1px solid #d9e4f2; }
+      .admin-table th { background: #f4f9ff; color: #123d74; }
+      .admin-table tr:hover { background: #fdfefe; }
+      .btn-delete { background: #ffebee; color: #d32f2f; border: 1px solid #ffcdd2; padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 0.85rem; font-weight: bold; }
+      .btn-delete:hover { background: #ffcdd2; }
+      .section-title { margin-top: 40px; margin-bottom: 15px; color: #1f7ae0; border-bottom: 2px solid #e3f7f2; padding-bottom: 5px; display: inline-block; }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-content">
+        <a class="brand" href="../index.html">
+          <img class="brand-logo" src="../assets/img/logo-placeholder.webp" alt="CVConnect Logo" />
+          <span>CVConnect Admin</span>
+        </a>
+        <nav class="nav">
+          
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-head">
+        <h1 class="page-title">Yönetim Paneli</h1>
+        <p class="lead">Sistemdeki tüm üyeleri ve verileri buradan yönetebilirsiniz.</p>
+      </section>
+
+      
+      <section class="admin-stats stats">
+        <div class="stat">
+          <strong id="admin-stat-candidates">0</strong>
+          <span>Toplam İş Arayan (Aday)</span>
+        </div>
+        <div class="stat">
+          <strong id="admin-stat-employers">0</strong>
+          <span>Toplam İşveren (Şirket)</span>
+        </div>
+        <div class="stat">
+          <strong id="admin-stat-jobs">0</strong>
+          <span>Açık İş Pozisyonu</span>
+        </div>
+      </section>
+
+      
+      <h2 class="section-title">Kayıtlı Adaylar</h2>
+      <input type="text" id="search-candidates" class="admin-search-box" placeholder="Aday adına veya e-postasına göre ara..." />
+      <section class="card admin-table-container">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Ad Soyad</th>
+              <th>E-posta</th>
+              <th>Şehir</th>
+              <th>Pozisyon</th>
+              <th>İşlem</th>
+            </tr>
+          </thead>
+          <tbody id="admin-candidates-body">
+            
+          </tbody>
+        </table>
+      </section>
+
+      
+      <h2 class="section-title">Kayıtlı İşverenler</h2>
+      <input type="text" id="search-employers" class="admin-search-box" placeholder="Şirket adına veya e-postasına göre ara..." />
+      <section class="card admin-table-container">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Şirket Adı</th>
+              <th>İletişim Kişisi</th>
+              <th>E-posta</th>
+              <th>Açık İlan Sayısı</th>
+              <th>İşlem</th>
+            </tr>
+          </thead>
+          <tbody id="admin-employers-body">
+            
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">CVConnect • Admin Paneli</div>
+    </footer>
+
+    <script src="../assets/js/storage.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/admin.js"></script>
+  </body>
+</html>

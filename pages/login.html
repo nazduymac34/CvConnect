@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CVConnect | Giriş Yap</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-content">
+        <a class="brand" href="../index.html">
+          <img class="brand-logo" src="../assets/img/logo-placeholder.webp" alt="CVConnect Logo" />
+          <span>CVConnect</span>
+        </a>
+        <nav class="nav">
+          
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-head">
+        <h1 class="page-title">Sisteme Giriş Yap</h1>
+        <p class="lead">E-posta ve şifrenizle giriş yaparak profilinize ulaşın.</p>
+      </section>
+
+      <section class="card" style="max-width: 500px; margin: 0 auto;">
+        <form id="login-form">
+          <label>E-posta<input type="email" name="email" required /></label>
+          <label>Şifre<input type="password" name="password" required /><span class="toggle-password" style="cursor:pointer;margin-left:5px;" title="Şifreyi göster/gizle">👁️</span></label>
+          
+          <button class="btn btn-primary" type="submit" style="margin-top: 10px;">Giriş Yap</button>
+          <div id="login-feedback" class="success hidden" style="background: #fff4ef; color: #ba4b2f; border-color: #ffd7c8;"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">CVConnect</div>
+    </footer>
+
+    <script src="../assets/js/storage.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CVConnect | Çalışan Ara</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-content">
+        <a class="brand" href="../index.html">
+          <img class="brand-logo" src="../assets/img/logo-placeholder.webp" alt="CVConnect Logo" />
+          <span>CVConnect</span>
+        </a>
+        <nav class="nav">
+          <a data-nav href="../index.html">Ana Sayfa</a>
+          <a data-nav href="candidate-register.html">İş Arayan Kayıt</a>
+          <a data-nav href="employer-register.html">İşveren Kayıt</a>
+          <a data-nav href="candidate-search.html">Çalışan Ara</a>
+          <a data-nav href="jobs.html">İlanlar</a>
+          <a data-nav href="inbox.html">Mesajlar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="page-head">
+        <h1 class="page-title">Aday Filtreleme ve İletişim</h1>
+        <p class="lead">İşverenler şehir, yetenek ve deneyime göre adayları filtreleyebilir.</p>
+      </section>
+
+      <section class="card">
+        <form id="filter-form">
+          <div class="form-grid">
+            <label>Şehir<input name="city" placeholder="Istanbul" /></label>
+            <label>Yetenek<input name="skill" placeholder="React" /></label>
+            <label>Minimum Deneyim (yıl)<input type="number" min="0" name="minExp" value="0" /></label>
+          </div>
+          <button class="btn btn-primary" type="submit">Filtreyi Uygula</button>
+        </form>
+      </section>
+
+      <section id="candidate-results" class="result-grid"></section>
+
+      <section class="card section">
+        <h2>Adaya Mesaj Gönder</h2>
+        <p class="hint">Önce bir aday kartında "Mesaj Gönder" butonuna tıklayın.</p>
+        <form id="message-form">
+          <div class="form-grid">
+            <label>Şirket Adı<input name="company" required /></label>
+            <label>Şirket E-postası<input type="email" name="email" required /></label>
+            <label>Konu<input name="subject" required /></label>
+          </div>
+          <label>Mesaj<textarea name="message" required></textarea></label>
+          <button class="btn btn-secondary" type="submit">Mesajı Kaydet ve Gönder</button>
+          <div id="message-feedback" class="success hidden"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">CVConnect</div>
+    </footer>
+
+    <script src="../assets/js/storage.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/candidate-search.js"></script>
+  </body>
+  </html>
